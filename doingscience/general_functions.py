@@ -1431,59 +1431,6 @@ def find_country_from_domain(d, return_code=True):
         return l['us']
 
 
-def get_ip_details(ip_address):
-    import ipinfo
-    access_token = ''
-    handler = ipinfo.getHandler(access_token)
-    details = handler.getDetails(ip_address)
-    return details.all
-
-
-def ip_from_domain(d):
-    import socket
-    return socket.gethostbyname(d)
-
-
-def get_domain_hosted_details(d):
-    d = extract_domain(d)
-    ip_address = ip_from_domain(d)
-    return get_ip_details(ip_address)
-
-
-def generate_docker_command(project_name, steps=[], reports_to_run=[], reports_to_rest=[],
-                            routines_to_run=[], routine_actions_to_run=[]):
-    print('gcloud beta compute ssh --zone "europe-west3-a" "maya-etl-1" --project "bi-analytics-253109"')
-    print('cd /home/maya/cleric &&')
-
-    if project_name == 'all':
-        base = f'docker-compose run worker run -workflow run_etl -all-schedules'
-    else:
-        base = f'docker-compose run --rm worker run -schedule {project_name}'
-
-    if steps:
-        base += f" -- --steps={','.join(steps)}"
-
-    if reports_to_run:
-        base += f" --reports-to-run={','.join(reports_to_run)}"
-
-    if reports_to_rest:
-        base += f" --reports-to-reset={','.join(reports_to_rest)}"
-
-    if routines_to_run:
-        base += f" --routines-to-run={','.join(routines_to_run)}"
-
-    if routine_actions_to_run:
-        base += f" --routine-actions-to-run={','.join(routine_actions_to_run)}"
-
-    print(base)
-
-
-def get_demo_vocabulary():
-    p = Path(__file__).with_name('demo_vocabulary_small.json')
-    demo_voc = json.load(open(p))
-    return demo_voc
-
-
 def randomize_series(s, ttype, params):
     random_factor = params.get('random_factor')
 
