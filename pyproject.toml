@@ -1,0 +1,19 @@
+[project]
+name = "doingscience"
+version = "0.0.1"
+authors = [
+    { name = "Iasonas Tragakis", email = "iasonas@doing-science.com" },
+]
+description = "This package includes multipurpose fuctions to simplify your life."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
