@@ -8,3 +8,4 @@ penv/*
 *.har
 *.qgz
 *.z
+dist/
