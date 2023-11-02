@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "justfunctions"
+version = "0.0.1"
+authors = ["Iasonas Tragakis <hey@justdataplease.com>"]
+description = "This package includes multipurpose fuctions to simplify your life."
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.13"
+pandas = "^2.1.2"
+requests = "^2.31.1"
+backoff = "^2.2.1"
+simplejson = "^3.19.2"
+pyfarmhash = "^0.3.2"
+beautifulsoup4 = "^4.12.2"
+psycopg2-binary = "^2.9"
+google-cloud-bigquery = "^2.34.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core>=1.8.1"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/justfunctions/justfunctions"
+"Bug Tracker" = "https://github.com/justdataplease/justfunctions/issues"
