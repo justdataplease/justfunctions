@@ -1,4 +1,4 @@
-# JustFunctions
+# JustFunctions for Python
 
 [![Build Status](https://img.shields.io/travis/com/justfunctions/justfunctions/main.svg?style=flat-square)](https://travis-ci.com/justfunctions/justfunctions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/justfunctions/justfunctions/main.svg?style=flat-square)](https://codecov.io/gh/justfunctions/justfunctions)
@@ -44,7 +44,3 @@ python generate_documentation.py
 
 ## License
 justfunctions is released under the MIT License. See the bundled LICENSE file for details.
-
-
-
-
